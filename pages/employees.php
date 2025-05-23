@@ -53,11 +53,7 @@ if (isset($_GET['year']) && $_GET['year'] !== '') {
     $where[] = "YEAR(Tgl_Masuk) = ?";
     $params[] = $_GET['year'];
 }
-// Filter Tahun Keluar
-if (isset($_GET['year']) && $_GET['year'] !== '') {
-    $where[] = "YEAR(Tgl_Keluar) = ?";
-    $params[] = $_GET['year'];
-}
+
 
 // Buat SQL Query
 $whereClause = !empty($where) ? 'WHERE ' . implode(' AND ', $where) : '';
