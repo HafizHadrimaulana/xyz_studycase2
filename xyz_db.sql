@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 23, 2025 at 07:05 AM
+-- Generation Time: May 23, 2025 at 08:00 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -150,8 +150,7 @@ INSERT INTO `pegawai` (`NIP`, `Nama_Pegawai`, `Tgl_Lahir`, `Unit_Kerja`, `Jabata
 (18213276.0, 'Raditya Waskita, S.E.', '1996-02-27 00:00:00', 'Audit', 'Kepala Divisi', '2012-07-09 00:00:00', NULL, 'Tetap', 'D3', 'ya', 'krahayu@pt.mil.id'),
 (2601580.0, 'Dr. Elvina Hardiansyah, S.T.', '1990-02-23 00:00:00', 'Audit', 'Supervisor', '2015-12-02 00:00:00', NULL, 'Kontrak', 'S1', 'Tidak tahu', 'vsimbolon@ud.net.id'),
 (16941092.0, 'Puput Habibi, S.I.Kom', '1979-08-11 00:00:00', 'IT', 'Kepala Divisi', '2021-05-29 00:00:00', NULL, 'Kontrak', 'S1', 'Sudah', 'dabukkejumari@pt.id'),
-(111.0, 'apis adrimaulanaaaaaw', '2025-05-01 00:00:00', 'Audit', 'Supervisor', '2025-05-01 00:00:00', NULL, 'Kontrak', 'S.Kom', 'Sudah', 'admin@laraveltemplate.com'),
-(113.0, 'tes', '2025-05-01 00:00:00', 'Audit', 'VP', '2025-05-01 00:00:00', NULL, 'Kontrak', 'S.Kom', 'Sudah', 'admin@laraveltemplate.com');
+(10519.0, 'Hafiz Hadrimaulana', '2000-01-01 00:00:00', 'IT', 'VP', '2024-05-23 00:00:00', NULL, 'Kontrak', 'S.Kom', 'Sudah', 'superadmin@gmail.com');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
