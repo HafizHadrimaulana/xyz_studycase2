@@ -1,0 +1,168 @@
+/* Cosmic Glassmorphism Login CSS */
+:root {
+  --cosmic-dark: #0a0a1f;
+  --cosmic-darker: #060616;
+  --cosmic-accent: #8a5cf6;
+  --cosmic-accent-light: #9b7df8;
+  --cosmic-text: #e0e0ff;
+  --cosmic-text-light: #ffffff;
+}
+
+body.login-page {
+  background: radial-gradient(ellipse at bottom, var(--cosmic-darker) 0%, #000000 100%);
+  height: 100vh;
+  overflow: hidden;
+  font-family: 'Segoe UI', sans-serif;
+  color: var(--cosmic-text);
+  position: relative;
+}
+
+/* Nebula Background */
+body.login-page::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 30%, rgba(138, 92, 246, 0.15) 0%, transparent 40%),
+    radial-gradient(circle at 80% 70%, rgba(67, 97, 238, 0.15) 0%, transparent 45%);
+  animation: nebulaPulse 20s infinite alternate;
+  z-index: 0;
+}
+
+/* Starfield Effect */
+body.login-page::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(1px 1px at 20% 30%, white 1px, transparent 1px),
+    radial-gradient(1px 1px at 80% 70%, white 1px, transparent 1px),
+    radial-gradient(1px 1px at 40% 60%, white 1px, transparent 1px);
+  background-size: 200px 200px;
+  opacity: 0.15;
+  z-index: 0;
+}
+
+.login-box {
+  width: 400px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.login-logo {
+  text-align: center;
+  margin-bottom: 30px;
+  animation: float 6s ease-in-out infinite;
+}
+
+.login-logo b {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--cosmic-text-light);
+  text-shadow: 0 0 15px rgba(138, 92, 246, 0.7);
+  letter-spacing: 2px;
+}
+
+.login-logo span {
+  color: var(--cosmic-accent-light);
+  font-weight: 300;
+}
+
+.card {
+  background: rgba(15, 15, 40, 0.7) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.login-card-body {
+  padding: 2rem;
+}
+
+.login-box-msg {
+  color: var(--cosmic-text);
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.input-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-control {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  color: var(--cosmic-text-light) !important;
+  height: 45px;
+  border-radius: 8px !important;
+}
+
+.form-control:focus {
+  border-color: var(--cosmic-accent) !important;
+  box-shadow: 0 0 0 0.2rem rgba(138, 92, 246, 0.25) !important;
+}
+
+.input-group-text {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  color: var(--cosmic-accent-light) !important;
+  border-radius: 8px !important;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--cosmic-accent) 0%, #6a3093 100%) !important;
+  border: none !important;
+  height: 45px;
+  border-radius: 8px !important;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(138, 92, 246, 0.4) !important;
+}
+
+.alert-danger {
+  background: rgba(255, 100, 100, 0.2) !important;
+  border: 1px solid rgba(255, 100, 100, 0.3) !important;
+  color: #ff9e9e !important;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 8px;
+}
+
+/* Animations */
+@keyframes nebulaPulse {
+  0% { opacity: 0.7; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.02); }
+  100% { opacity: 0.7; transform: scale(1); }
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 576px) {
+  .login-box {
+    width: 90%;
+  }
+}
